@@ -62,50 +62,82 @@ string pays;
 string capitale;
 int menuNav;
 
-Console.WriteLine("Hello World !");
-Console.WriteLine("1.Ajouter des couples Pays / Capitale");
-Console.WriteLine("2.Rechercher une capitale à partir d'un Pays");
-Console.WriteLine("3.Afficher tout les couples Pays / Capitale");
+
 
 while (true)
 {
-    
+    Console.WriteLine("Hello World !");
+    Console.WriteLine("1.Ajouter des couples Pays / Capitale");
+    Console.WriteLine("2.Rechercher une capitale à partir d'un Pays");
+    Console.WriteLine("3.Afficher tout les couples Pays / Capitale");
 
     menuNav = Convert.ToInt32(Console.ReadLine());
 
     switch (menuNav)
     {
-        case 1 :
-   
-            Console.WriteLine("Donne moi un Pays et un capitale ou tapez fin pour arrêter");
-            Console.Write("Un Pays ? ");
-            pays = Console.ReadLine();
+        case 1:
 
-            Console.Write("Une Capitale ? ");
-            capitale = Console.ReadLine();
+            while (true)
+            {
+
+                Console.WriteLine("Donne moi un Pays et un capitale ou tapez fin pour revenir au menu principal");
+
+                Console.Write("Un Pays ? ");
+                pays = Console.ReadLine();
+
+                if (pays == "fin")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.Write("Une Capitale ? ");
+                    capitale = Console.ReadLine();
+                    paysCapital.Add(pays, capitale);
+                }
+
+            }
+            Console.Clear();
             break;
-            
+
         case 2:
-            Console.WriteLine("Donne moi unou tapez fin pour arrêter");
+
+
+            while (true)
+            {
+                Console.Clear();
+
+                Console.WriteLine("Donne moi le nom d'un pays et trouvons sa capitale ou tapez fin pour revenir au menu principal");
+                pays = Console.ReadLine();
+
+                if (pays == "fin")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("la capitale est : " + paysCapital[pays]);
+                    Console.ReadKey();
+                }
+            }
             break;
 
 
+        case 3:
 
+            Console.Clear();
+
+            Console.WriteLine("Voici tout les couples de Pays / Capitale enregistrer");
+
+            foreach (KeyValuePair<string, string> pair in paysCapital)
+            {
+                Console.WriteLine(pair.Key, pair.Value);
+            }
+
+
+
+            break;
 
 
     }
-    
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
 
