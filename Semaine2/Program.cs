@@ -3,6 +3,7 @@
 
 using System.Collections.Immutable;
 using System.ComponentModel.Design;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 
 /*int[] notes = { 10, 12, 15, 8 };
@@ -139,5 +140,125 @@ while (true)
             break;
 
 
-    }
+    }*/
 
+
+
+
+//Exercice 5
+
+
+/*    int[] entiers = { 1, 3, 4, 6, 9 };
+
+    List<string> prenoms = new List<string> { "Hazel", "Loïc", "Cédric", "Amine" };
+    //prenoms.Add("Hazel");
+    //prenoms.Add("Loïc");
+    //prenoms.Add("Cédric");
+    //prenoms.Add("Amine");
+
+    Dictionary<string, string> paysCapitale = new Dictionary<string, string>
+    {
+        ["France"] = "Paris",
+        ["Espagne"] = "madrid",
+        ["Belgique"] = "bruxelles"
+    };
+
+    int compteurElement = 0;
+
+    foreach (int entier in entiers)
+    {
+        compteurElement++;
+        Console.Write($"{entier} ");
+    }
+    ;
+
+    Console.WriteLine();
+
+    int compteurPrenoms = 0;
+    foreach (string prenom in prenoms)
+    {
+        compteurElement++;
+        compteurPrenoms++;
+        Console.Write($"{compteurPrenoms} : {prenom} ");
+    }
+    ;
+
+    Console.WriteLine();
+
+foreach (var pair in paysCapitale)
+{
+    compteurElement++;
+    Console.WriteLine($"{pair.Key} : {pair.Value}");
+};
+
+Console.WriteLine();
+Console.WriteLine(compteurElement);*/
+
+
+
+
+
+// LES FONCTIONS EN C#
+
+//Pascal case -> Fonctions / Méthode (VoiciUnPascalCase)
+
+//Camel case -> Variables (voiciUnCamelCase)
+
+//Snake_case -> Dossier / fichier (voici_un_snake_case)
+
+//kebab-case -> Dossier / fichier (voici-un-kebab-case)
+
+//UPPER CASE -> Constantes (VOICIUNUPPERCASE)
+
+
+// Exercice 1
+
+
+/*static void AfficherSeprateur()
+{
+    Console.WriteLine(new string('-', 30));
+}
+
+AfficherSeprateur();*/
+
+
+//Exercice 2
+
+int a;
+int b;
+
+Console.WriteLine("Entrer deux nombres, je vais les additionner");
+Console.WriteLine("Le premier nombre : ");
+a = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Le deuxieme nombre : ");
+b = Convert.ToInt32(Console.ReadLine());
+
+static int Additionner(int a, int b)
+{
+    int resultat = a + b;
+    return resultat;
+}
+Console.WriteLine("Le résultat est " + Additionner(a, b));
+
+
+
+Console.WriteLine("entre un nombre est voyons si il est pair : ");
+int nombre = Convert.ToInt32(Console.ReadLine());
+
+static bool EstPair(int nombre)
+{
+    return nombre % 2 == 0;
+}
+
+Console.WriteLine(EstPair(nombre));
+
+Console.WriteLine();
+
+
+static double CalculerPrixTTC(double prixHT, double tauxTVA = 0.20)
+{
+    return prixHT + prixHT * tauxTVA;
+}
+
+Console.WriteLine(CalculerPrixTTC(55, 0.20));
