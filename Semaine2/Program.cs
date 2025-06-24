@@ -224,7 +224,7 @@ AfficherSeprateur();*/
 
 //Exercice 2
 
-int a;
+/*int a;
 int b;
 
 Console.WriteLine("Entrer deux nombres, je vais les additionner");
@@ -261,4 +261,7 @@ static double CalculerPrixTTC(double prixHT, double tauxTVA = 0.20)
     return prixHT + prixHT * tauxTVA;
 }
 
-Console.WriteLine(CalculerPrixTTC(55, 0.20));
+Console.WriteLine(CalculerPrixTTC(55, 0.20));*/
+
+
+// Exercice 3
