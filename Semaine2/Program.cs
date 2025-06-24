@@ -57,7 +57,7 @@ Console.WriteLine(prenoms.Contains("Hazel"));//variable.Contains("") connaitre s
 
 //Exercice notion 4
 
-Dictionary<string, string> paysCapital = new Dictionary<string, string>();
+/*Dictionary<string, string> paysCapital = new Dictionary<string, string>();
 string pays;
 string capitale;
 int menuNav;
@@ -96,4 +96,16 @@ while (true)
     }
     
 }
+
+*/
+
+
+
+
+
+
+
+
+
+
 
