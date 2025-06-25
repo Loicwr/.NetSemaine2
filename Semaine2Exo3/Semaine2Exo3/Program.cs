@@ -3,7 +3,7 @@
     internal class Program
     {                                                              //EXERCICE 3
 
-/*        static int Multiplier(int a, int b)
+       static int Multiplier(int a, int b)
         {
             return a * b;
         }
@@ -35,15 +35,11 @@
             int[] tableau = new int[] { 2, 3, 4 };
             Console.WriteLine(Multiplier(tableau));
 
-        }*/                                                       //EXERCICE 3
+        }                                                   //EXERCICE 3
 
 
-                                                                  //EXERCICE 5
         
-        public static string BonjourGlobal(string message)
-        {
-            
-        }
+       
         
 
        
