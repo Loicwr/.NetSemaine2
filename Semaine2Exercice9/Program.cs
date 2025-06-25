@@ -5,14 +5,14 @@ namespace Semaine2Exercice9
     public static class NotesUtil
     {
 
-       
+
 
         public static void Main()
         {
 
 
             Console.WriteLine("Combien de notes voulez-vous entrer ?");
-                int nombreNotes = Convert.ToInt32(Console.ReadLine());
+            int nombreNotes = Convert.ToInt32(Console.ReadLine());
 
             int totalPoints = 0;
             List<int> notesListStock = new List<int>();
@@ -26,7 +26,7 @@ namespace Semaine2Exercice9
                 totalPoints += entrerUtilisateur;
             }
 
-            Console.WriteLine(string.Join(" ",notesListStock));
+            
 
 
             double moyenne = CalculerMoyenne(totalPoints, nombreNotes);
@@ -36,13 +36,13 @@ namespace Semaine2Exercice9
 
             double moyenneTableau = CalculerMoyenne(tableauNotes);
             Console.WriteLine($"La moyenne du tableau est de : {moyenneTableau:F2}");
-           
-            
+
+
         }
 
         public static double CalculerMoyenne(int totalPoints, int nombreNotes)
         {
-            double resultat = (double) totalPoints / nombreNotes;
+            double resultat = (double)totalPoints / nombreNotes;
             return resultat;
         }
 
@@ -50,14 +50,14 @@ namespace Semaine2Exercice9
         {
             int sommeNotes = 0;
 
-            foreach(int note in notes)
+            foreach (int note in notes)
             {
                 sommeNotes += note;
             }
 
             return CalculerMoyenne(sommeNotes, notes.Length);
-            
-            
+
+
 
         }
     }
