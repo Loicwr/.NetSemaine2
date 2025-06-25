@@ -15,20 +15,18 @@ namespace Semaine2Exercice9
                 int nombreNotes = Convert.ToInt32(Console.ReadLine());
 
             int totalPoints = 0;
-            
+            List<int> notesListStock = new List<int>();
 
             for (int i = 0; i < nombreNotes; i++)
             {
                 Console.WriteLine($"Entrez la note #{i + 1} sur 20 :");
                 int entrerUtilisateur = Convert.ToInt32(Console.ReadLine());
 
+                notesListStock.Add(entrerUtilisateur);
                 totalPoints += entrerUtilisateur;
             }
 
-
-
-
-
+            Console.WriteLine(string.Join(" ",notesListStock));
 
 
             double moyenne = CalculerMoyenne(totalPoints, nombreNotes);
